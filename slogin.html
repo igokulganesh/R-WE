@@ -1,30 +1,24 @@
 <html> 
-
 <head>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-</head>>
+</head>
 
 <body>
-  
+<h1><center>Student Log In</center></h1>
+<div id="login_div" class="modal-content animate"">
+<div class="container"> 
+   <label><b>Username</b></label><br>
+   <center><input type="text" placeholder="Enter Email" id="email_field" /></center><br>
+   <label><b>Password</b></label><br>
+   <center><input type="password" placeholder="Enter Password" id="password_field" /></center><br>
+   <button onclick="login()">Login to Account</button>
+   <input type="checkbox" checked="checked"> Remember me 
 
-    <h1><center>Student Log In</center></h1>
-        <center><img src= "https://lh3.googleusercontent.com/proxy/cCeso84SWbLD6J4S4SZXR14T8PM4fVi-Tabpt_ZsUqo4bfp0XIj_oJRqzL50-deiujubNgfhm45ebLHgbfAmGlwH8d7mH-0A6cTm-iaF4-8485ED" alt="Avatar" class="avatar"></center> 
-
-    <div id="login_div" class="main-div">
-      <input type="email" placeholder="Enter Email" id="email_field" />
-      <input type="password" placeholder="Enter Password" id="password_field" />
-
-      <button onclick="login()">Login to Account</button>
-
-        </div> 
-
-        <div class="container" style="background-color:#f1f1f1"> 
-          <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button> 
-          <span class="psw">Forgot <a href="#">password?</a></span> 
-        </div> 
-      </form> 
-    </div>
+</div> 
+<div class="container" style="background-color:#f1f1f1"> 
+	<span class="psw">Forgot <a href="#">password?</a></span> 
+</div>  
 
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
@@ -54,5 +48,4 @@
   <script src="/__/firebase/init.js"></script>
 
 </body>
-
- </html>
+</html>

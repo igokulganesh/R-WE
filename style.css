@@ -1,12 +1,10 @@
-  /*assign full width inputs*/ 
-  input[type=email],input[type=password] 
-  {
-    width: 50%; 
+    /*assign full width inputs*/ 
+  input[type=text], 
+  input[type=password] { 
+    width: 100%; 
     padding: 12px 20px; 
     margin: 8px 0; 
-    display: inline-block;
-    alignment-baseline: center;  
-    text-align-last: center; 
+    display: inline-block; 
     border: 1px solid #ccc; 
     box-sizing: border-box; 
   } 
@@ -43,8 +41,8 @@
   
   /*set image properties*/ 
   img.avatar { 
-    width: 20%; 
-    border-radius: 30%; 
+    width: 40%; 
+    border-radius: 50%; 
   } 
   
   /*set padding to the container*/ 
@@ -61,7 +59,7 @@
   /*set the Modal background*/ 
   .modal { 
     display: none; 
-    position: fixed ; 
+    position: fixed; 
     z-index: 1; 
     left: 0; 
     top: 0; 
