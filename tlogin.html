@@ -132,34 +132,24 @@
     } 
   } 
 </style> 
-<h1><center>Sign Up</center></h1>
-<form class="modal-content animate" action="/action_page.php">
+<h1><center>Teacher Log In</center></h1>
+      <center><img src= "https://thumbs.dreamstime.com/b/male-teacher-standing-near-blackboard-flat-illustration-asian-male-teacher-standing-near-blackboard-flat-illustration-smiling-154100458.jpg" alt="Avatar" class="avatar"></center> 
+
       <div class="container"> 
-        <label><b>Email</b></label> 
-        <input type="text" placeholder="Enter Email" name="email" required> 
+        <label><b>Username</b></label> 
+        <input type="text" placeholder="Enter Username" name="uname" required> 
 
         <label><b>Password</b></label> 
         <input type="password" placeholder="Enter Password" name="psw" required> 
 
-        <label><b>Repeat Password</b></label> 
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required> 
-        <input type="checkbox"> Remember me <br><br>
-				
-		<label><b>Please select your Duty:</b></label><br>
-		<input type="radio" id="teacher" name="duty">
-		<label for="male">Teacher</label><br>
-		<input type="radio" id="student" name="duty">
-		<label for="female">Student</label><br>
-		
-        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> 
-		<p>If you already have a Teacher account, then <a href="tlogin.html">Click here</a>.</p>
-        <p>Or Student account, <a href="slogin.html">Click here</a>.</p> 
-
-
-        <div class="clearfix"> 
-          <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button> 
-          <button type="submit" class="signupbtn">Sign Up</button> 
-        </div> 
+        <button type="submit">Login</button> 
+        <input type="checkbox" checked="checked"> Remember me 
       </div> 
-</form>
-</html>	
+
+      <div class="container" style="background-color:#f1f1f1"> 
+        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button> 
+        <span class="psw">Forgot <a href="#">password?</a></span> 
+      </div> 
+    </form> 
+  </div>
+ </html>
