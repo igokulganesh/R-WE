@@ -1,155 +1,58 @@
 <html> 
-<style> 
-  
-  /*assign full width inputs*/ 
-  input[type=text], 
-  input[type=password] { 
-    width: 100%; 
-    padding: 12px 20px; 
-    margin: 8px 0; 
-    display: inline-block; 
-    border: 1px solid #ccc; 
-    box-sizing: border-box; 
-  } 
-  
-  /*set a style for the buttons*/ 
-  button { 
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 14px 20px; 
-    margin: 8px 0; 
-    border: none; 
-    cursor: pointer; 
-    width: 100%; 
-  } 
-  
-  /* set a hover effect for the button*/ 
-  button:hover { 
-    opacity: 0.8; 
-  } 
-  
-  /*set extra style for the cancel button*/ 
-  .cancelbtn { 
-    width: auto; 
-    padding: 10px 18px; 
-    background-color: #f44336; 
-  } 
-  
-  /*centre the display image inside the container*/ 
-  .imgcontainer { 
-    text-align: center; 
-    margin: 24px 0 12px 0; 
-    position: relative; 
-  } 
-  
-  /*set image properties*/ 
-  img.avatar { 
-    width: 40%; 
-    border-radius: 50%; 
-  } 
-  
-  /*set padding to the container*/ 
-  .container { 
-    padding: 16px; 
-  } 
-  
-  /*set the forgot password text*/ 
-  span.psw { 
-    float: right; 
-    padding-top: 16px; 
-  } 
-  
-  /*set the Modal background*/ 
-  .modal { 
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0, 0, 0); 
-    background-color: rgba(0, 0, 0, 0.4); 
-    padding-top: 60px; 
-  } 
-  
-  /*style the model content box*/ 
-  .modal-content { 
-    background-color: #fefefe; 
-    margin: 5% auto 15% auto; 
-    border: 1px solid #888; 
-    width: 80%; 
-  } 
-  
-  /*style the close button*/ 
-  .close { 
-    position: absolute; 
-    right: 25px; 
-    top: 0; 
-    color: #000; 
-    font-size: 35px; 
-    font-weight: bold; 
-  } 
-  
-  .close:hover, 
-  .close:focus { 
-    color: red; 
-    cursor: pointer; 
-  } 
-  
-  /* add zoom animation*/ 
-  .animate { 
-    -webkit-animation: animatezoom 0.6s; 
-    animation: animatezoom 0.6s 
-  } 
-  
-  @-webkit-keyframes animatezoom { 
-    from { 
-      -webkit-transform: scale(0) 
-    } 
-    to { 
-      -webkit-transform: scale(1) 
-    } 
-  } 
-  
-  @keyframes animatezoom { 
-    from { 
-      transform: scale(0) 
-    } 
-    to { 
-      transform: scale(1) 
-    } 
-  } 
-  
-  @media screen and (max-width: 300px) { 
-    span.psw { 
-      display: block; 
-      float: none; 
-    } 
-    .cancelbtn { 
-      width: 100%; 
-    } 
-  } 
-</style> 
-<h1><center>Student Log In</center></h1>
-      <center><img src= "data:image/png;base64,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" height="300" width="300" alt="Avatar" class="avatar"></center> 
 
-      <div class="container"> 
-        <label><b>Username</b></label> 
-        <input type="text" placeholder="Enter Username" name="uname" required> 
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>>
 
-        <label><b>Password</b></label> 
-        <input type="password" placeholder="Enter Password" name="psw" required> 
+<body>
+  
 
-        <button type="submit">Login</button> 
-        <input type="checkbox" checked="checked"> Remember me 
-      </div> 
+    <h1><center>Student Log In</center></h1>
+        <center><img src= "https://lh3.googleusercontent.com/proxy/cCeso84SWbLD6J4S4SZXR14T8PM4fVi-Tabpt_ZsUqo4bfp0XIj_oJRqzL50-deiujubNgfhm45ebLHgbfAmGlwH8d7mH-0A6cTm-iaF4-8485ED" alt="Avatar" class="avatar"></center> 
 
-      <div class="container" style="background-color:#f1f1f1"> 
-        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button> 
-        <span class="psw">Forgot <a href="#">password?</a></span> 
-      </div> 
-    </form> 
-  </div>
+    <div id="login_div" class="main-div">
+      <input type="email" placeholder="Enter Email" id="email_field" />
+      <input type="password" placeholder="Enter Password" id="password_field" />
+
+      <button onclick="login()">Login to Account</button>
+
+        </div> 
+
+        <div class="container" style="background-color:#f1f1f1"> 
+          <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button> 
+          <span class="psw">Forgot <a href="#">password?</a></span> 
+        </div> 
+      </form> 
+    </div>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyB9RcXQrgofmWFtCIQlF-fghgqEwtzSZEA",
+        authDomain: "r-we-d08d8.firebaseapp.com",
+        databaseURL: "https://r-we-d08d8.firebaseio.com",
+        projectId: "r-we-d08d8",
+        storageBucket: "r-we-d08d8.appspot.com",
+        messagingSenderId: "595157195952",
+        appId: "1:595157195952:web:04c464432c2ee310332f75",
+        measurementId: "G-N6J244QDNP"
+      };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="index.js"></script>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.14.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.14.5/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+</body>
+
  </html>
