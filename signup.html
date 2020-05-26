@@ -132,6 +132,11 @@
     } 
   } 
 </style> 
+
+
+<body>
+
+<title>SignUp Page</title>
 <h1><center>Sign Up</center></h1>
 <form class="modal-content animate" action="/action_page.php">
       <div class="container"> 
@@ -158,8 +163,38 @@
 
         <div class="clearfix"> 
           <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button> 
-          <button type="submit" class="signupbtn">Sign Up</button> 
+          <button onclick="signUp()">Sign Up</button> 
         </div> 
       </div> 
 </form>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyB9RcXQrgofmWFtCIQlF-fghgqEwtzSZEA",
+        authDomain: "r-we-d08d8.firebaseapp.com",
+        databaseURL: "https://r-we-d08d8.firebaseio.com",
+        projectId: "r-we-d08d8",
+        storageBucket: "r-we-d08d8.appspot.com",
+        messagingSenderId: "595157195952",
+        appId: "1:595157195952:web:04c464432c2ee310332f75",
+        measurementId: "G-N6J244QDNP"
+      };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="index.js"></script>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.14.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.14.5/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+</body>
+
+
 </html>	

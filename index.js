@@ -44,3 +44,22 @@ function logout()
 {
   firebase.auth().signOut();
 }
+
+
+function signUp(){
+  
+    
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("psw").value;
+    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
+  // Handle Errors here.
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  // ...
+});
+
+    
+    
+  
+  }
+
