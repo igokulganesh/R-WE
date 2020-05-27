@@ -4,6 +4,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     document.getElementById("user_div").style.display = "block";
     document.getElementById("login_div").style.display = "none";
+    document.getElementById("signup_div").style.display = "none";
 
     var user = firebase.auth().currentUser;
 
@@ -19,26 +20,26 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     document.getElementById("user_div").style.display = "none";
     document.getElementById("login_div").style.display = "block";
+    document.getElementById("signup_div").style.display = "block";
 
   }
 });
 
-function login(){
+function login()
+{
 
   var userEmail = document.getElementById("email_field").value;
   var userPass = document.getElementById("password_field").value;
 
-  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) {
+  firebase.auth().signInWithEmailAndPassword(userEmail, userPass).catch(function(error) 
+  {
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
 
     window.alert("Error : " + errorMessage);
-
-    // ...
-  }
-  window.alert("Logged in Successfully"));
-
+  });
+  window.alert("logined by  " + userEmail)
 }
 
 function logout()
@@ -47,17 +48,19 @@ function logout()
 }
 
 
-function signUp(){
-   window.alert("Function call check");
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("psw").value;
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-}
-window.alert("Signed Up Succesfully");
+function signUp()
+{   
+  var email = document.getElementById("email_field").value;
+  var password = document.getElementById("password_field").value;
+  firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) 
+  {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    window.alert("Error : " + errorMessage);
+  });
 
-    
+
+  window.alert("Signed Up Succesfully")
 }
 

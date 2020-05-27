@@ -1,25 +1,25 @@
-<html>
+<!DOCTYPE html>
+<html> 
+
 <head>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-</head>  
-<h1><center>Teacher Log In</center></h1>
-<div id="login_div" class="modal-content animate">
-      <div class="container"> 
-        <label><b>Username</b></label> 
-        <input type="text" placeholder="Enter Email" name="email_field" required> 
+</head>
+	
+<body>
+<br><br><br>
+<center><!-- 
+<form class="modal-content animate" action="/action_page.php">  -->
+    <h1>Teacher Log In</h1> 
 
-        <label><b>Password</b></label> 
-        <input type="password" placeholder="Enter Password" name="password_field" required> 
+    <div id="login_div" class="main-div">
+      <input type="email" placeholder="Enter Email" id="email_field" /><br>
+      <input type="password" placeholder="Enter Password" id="password_field" /><br>
+      <button onclick="login()">Login to Account</button>
+    </div>
+<!-- </form>  -->
+</center>
 
-        <button type="submit" onclick="login()">Login</button> 
-        <input type="checkbox" checked="checked"> Remember me 
-      </div> 
-      <div class="container" style="background-color:#f1f1f1"> 
-        <span class="psw">Forgot <a href="#">password?</a></span> 
-      </div> 
-  </div>
- </div>
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
   <script>
       // Initialize Firebase
@@ -47,5 +47,8 @@
   <!-- Initialize Firebase -->
   <script src="/__/firebase/init.js"></script>
 
+
+
 </body>
+
 </html>
