@@ -1,7 +1,7 @@
   /*assign full width inputs*/ 
   input[type=email],input[type=password] 
   {
-    width: 50%; 
+    width: 35%; 
     padding: 12px 20px; 
     margin: 8px 0; 
     display: inline-block;
