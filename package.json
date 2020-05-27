@@ -1,0 +1,26 @@
+{
+  "name": "r-we",
+  "version": "1.0.0",
+  "description": "Remote Education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igokulganesh/R-WE.git"
+  },
+  "keywords": [
+    "firebase",
+    "nodejs"
+  ],
+  "author": "Gokul",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igokulganesh/R-WE/issues"
+  },
+  "homepage": "https://github.com/igokulganesh/R-WE#readme",
+  "dependencies": {
+    "firebase-admin": "^8.12.1"
+  }
+}
