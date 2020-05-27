@@ -1,155 +1,51 @@
 <html> 
-<style> 
-  
-  /*assign full width inputs*/ 
-  input[type=text], 
-  input[type=password] { 
-    width: 100%; 
-    padding: 12px 20px; 
-    margin: 8px 0; 
-    display: inline-block; 
-    border: 1px solid #ccc; 
-    box-sizing: border-box; 
-  } 
-  
-  /*set a style for the buttons*/ 
-  button { 
-    background-color: #4CAF50; 
-    color: white; 
-    padding: 14px 20px; 
-    margin: 8px 0; 
-    border: none; 
-    cursor: pointer; 
-    width: 100%; 
-  } 
-  
-  /* set a hover effect for the button*/ 
-  button:hover { 
-    opacity: 0.8; 
-  } 
-  
-  /*set extra style for the cancel button*/ 
-  .cancelbtn { 
-    width: auto; 
-    padding: 10px 18px; 
-    background-color: #f44336; 
-  } 
-  
-  /*centre the display image inside the container*/ 
-  .imgcontainer { 
-    text-align: center; 
-    margin: 24px 0 12px 0; 
-    position: relative; 
-  } 
-  
-  /*set image properties*/ 
-  img.avatar { 
-    width: 40%; 
-    border-radius: 50%; 
-  } 
-  
-  /*set padding to the container*/ 
-  .container { 
-    padding: 16px; 
-  } 
-  
-  /*set the forgot password text*/ 
-  span.psw { 
-    float: right; 
-    padding-top: 16px; 
-  } 
-  
-  /*set the Modal background*/ 
-  .modal { 
-    display: none; 
-    position: fixed; 
-    z-index: 1; 
-    left: 0; 
-    top: 0; 
-    width: 100%; 
-    height: 100%; 
-    overflow: auto; 
-    background-color: rgb(0, 0, 0); 
-    background-color: rgba(0, 0, 0, 0.4); 
-    padding-top: 60px; 
-  } 
-  
-  /*style the model content box*/ 
-  .modal-content { 
-    background-color: #fefefe; 
-    margin: 5% auto 15% auto; 
-    border: 1px solid #888; 
-    width: 80%; 
-  } 
-  
-  /*style the close button*/ 
-  .close { 
-    position: absolute; 
-    right: 25px; 
-    top: 0; 
-    color: #000; 
-    font-size: 35px; 
-    font-weight: bold; 
-  } 
-  
-  .close:hover, 
-  .close:focus { 
-    color: red; 
-    cursor: pointer; 
-  } 
-  
-  /* add zoom animation*/ 
-  .animate { 
-    -webkit-animation: animatezoom 0.6s; 
-    animation: animatezoom 0.6s 
-  } 
-  
-  @-webkit-keyframes animatezoom { 
-    from { 
-      -webkit-transform: scale(0) 
-    } 
-    to { 
-      -webkit-transform: scale(1) 
-    } 
-  } 
-  
-  @keyframes animatezoom { 
-    from { 
-      transform: scale(0) 
-    } 
-    to { 
-      transform: scale(1) 
-    } 
-  } 
-  
-  @media screen and (max-width: 300px) { 
-    span.psw { 
-      display: block; 
-      float: none; 
-    } 
-    .cancelbtn { 
-      width: 100%; 
-    } 
-  } 
-</style> 
-<h1><center>Teacher Log In</center></h1>
-      <center><img src= "https://thumbs.dreamstime.com/b/male-teacher-standing-near-blackboard-flat-illustration-asian-male-teacher-standing-near-blackboard-flat-illustration-smiling-154100458.jpg" alt="Avatar" class="avatar"></center> 
 
-      <div class="container"> 
-        <label><b>Username</b></label> 
-        <input type="text" placeholder="Enter Username" name="uname" required> 
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+	
+<body>
 
-        <label><b>Password</b></label> 
-        <input type="password" placeholder="Enter Password" name="psw" required> 
+<form class="modal-content animate" action="/action_page.php">
+	<h1><center>Teacher Log In</center></h1>
+	<div id="login_div" class="main-div">
+		<center> <input type="email" placeholder="Enter Username" id="email_field" required></center><br>
+		<center> <input type="password" placeholder="Enter Password" id="password_field" required></center>
+		<center><button onclick="login()">Login to Account</button></center>
+	</div> 
+</form>
 
-        <button type="submit">Login</button> 
-        <input type="checkbox" checked="checked"> Remember me 
-      </div> 
 
-      <div class="container" style="background-color:#f1f1f1"> 
-        <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button> 
-        <span class="psw">Forgot <a href="#">password?</a></span> 
-      </div> 
-    </form> 
-  </div>
- </html>
+<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyB9RcXQrgofmWFtCIQlF-fghgqEwtzSZEA",
+        authDomain: "r-we-d08d8.firebaseapp.com",
+        databaseURL: "https://r-we-d08d8.firebaseio.com",
+        projectId: "r-we-d08d8",
+        storageBucket: "r-we-d08d8.appspot.com",
+        messagingSenderId: "595157195952",
+        appId: "1:595157195952:web:04c464432c2ee310332f75",
+        measurementId: "G-N6J244QDNP"
+      };
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="index.js"></script>
+
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="/__/firebase/7.14.5/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="/__/firebase/7.14.5/firebase-analytics.js"></script>
+
+  <!-- Initialize Firebase -->
+  <script src="/__/firebase/init.js"></script>
+
+
+
+</body>
+
+</html>
