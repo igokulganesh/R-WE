@@ -38,6 +38,7 @@ function login()
     var errorMessage = error.message;
 
     window.alert("Error : " + errorMessage);
+    return;
   });
   window.alert("logined by  " + userEmail)
 }
