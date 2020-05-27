@@ -48,8 +48,8 @@ function logout()
 
 function signUp(){
    
-    var email = document.getElementById("email_field").value;
-    var password = document.getElementById("password_field").value;
+    var email = document.getElementById("email").value;
+    var password = document.getElementById("psw").value;
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
