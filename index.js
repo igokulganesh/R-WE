@@ -11,7 +11,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       var email_id = user.email;
       document.getElementById("user_para").innerHTML = "Welcome User : " + email_id;
-
+      window.alert("login Succcesfully");
     }
 
   } else {
@@ -47,20 +47,19 @@ function logout()
 
 
 function signUp(){
-  
-    
-    var email = document.getElementById("email").value;
-    var password = document.getElementById("psw").value;
+   
+    var email = document.getElementById("email_field").value;
+    var password = document.getElementById("password_field").value;
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
+
+  alert("Signed Up Succcesfully");
   // ...
 }
 window.alert("Signed Up Succesfully")
 
     
-    
-  
-  }
+}
 
