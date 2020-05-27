@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html> 
 
 <head>
@@ -7,14 +8,17 @@
 	
 <body>
 
-<form class="modal-content animate" action="/action_page.php">
-	<h1><center>Teacher Log In</center></h1>
-	<div id="login_div" class="main-div">
-		<center> <input type="email" placeholder="Enter Username" id="email_field" required></center><br>
-		<center> <input type="password" placeholder="Enter Password" id="password_field" required></center>
-		<center><button onclick="login()">Login to Account</button></center>
-	</div> 
-</form>
+<form class="modal-content animate" action="/action_page.php"> 
+    <h1><center>Teacher Log In</center></h1> 
+    <center>
+    <div id="login_div" class="main-div">
+      <input type="email" placeholder="Enter Email" id="email_field" /><br>
+      <input type="password" placeholder="Enter Password" id="password_field" /><br>
+
+      <button onclick="login()">Login to Account</button>
+      </center>
+    </div>
+</form> 
 
 
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
