@@ -54,9 +54,6 @@ function signUp(){
   // Handle Errors here.
   var errorCode = error.code;
   var errorMessage = error.message;
-
-  alert("Signed Up Succcesfully");
-  // ...
 }
 window.alert("Signed Up Succesfully")
 
