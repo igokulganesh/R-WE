@@ -36,7 +36,8 @@ function login(){
     window.alert("Error : " + errorMessage);
 
     // ...
-  });
+  }
+  window.alert("Logged in Successfully"));
 
 }
 
@@ -47,7 +48,7 @@ function logout()
 
 
 function signUp(){
-   
+   window.alert("Function call check");
     var email = document.getElementById("email").value;
     var password = document.getElementById("psw").value;
     firebase.auth().createUserWithEmailAndPassword(email, password).catch(function(error) {
@@ -55,7 +56,7 @@ function signUp(){
   var errorCode = error.code;
   var errorMessage = error.message;
 }
-window.alert("Signed Up Succesfully")
+window.alert("Signed Up Succesfully");
 
     
 }
