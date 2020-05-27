@@ -3,35 +3,29 @@
 <head>
   <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
-</head>>
+</head>
+
 <body>
 
 <title>SignUp Page</title>
-<h1><center>Sign Up</center></h1>
+
 <form class="modal-content animate" action="/action_page.php">
-      <div class="container"> 
-        <label><b>Email</b></label> 
-        <input type="email" placeholder="Enter Email" name="email_field" required> 
-
-        <label><b>Password</b></label> 
-        <input type="password" placeholder="Enter Password" name="password_field" required> 
-				
-		<label><b>Please select your Duty:</b></label><br>
-		<input type="radio" id="teacher" name="duty">
-		<label for="male">Teacher</label><br>
-		<input type="radio" id="student" name="duty">
-		<label for="female">Student</label><br>
+  <h1><center>Sign Up</center></h1>
+  <div id="signup-div" class="main-div">
+  <center> <input type="email" placeholder="Enter Username" id="email_field" required></center><br>
+  <center> <input type="password" placeholder="Enter Password" id="password_field" required></center><br>
 		
-		<p>If you already have a Teacher account, then <a href="tlogin.html">Click here</a>.</p>
-    <p>Or Student account, <a href="slogin.html">Click here</a>.</p> 
-    <button onclick="signUp()">Sign Up</button> 
-
-        <div class="clearfix"> 
-          <button type="button" onclick="document.getElementById('id02').style.display='none'" 
-          class="cancelbtn">Cancel
-          </button> 
-        </div> 
-      </div> 
+  <center><label><b>Your Duty:</b></label><br></center><br>
+  <center><input type="radio" id="teacher" name="duty">
+  <label for="Teacher">Teacher</label><br></center><br>
+  <center><input type="radio" id="student" name="duty">
+  <label for="student">Student</label></center><br>
+		
+		<center><p>If you already have a Teacher account, then <a href="tlogin.html">Click here</a></p>
+    <p>Or Student account, <a href="slogin.html">Click here</a></p></center>
+  
+  <center><button onclick="signUp()">Sign Up</button> </center>
+    </div> 
 </form>
 
 <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
