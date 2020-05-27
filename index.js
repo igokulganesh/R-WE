@@ -56,7 +56,8 @@ function signUp(){
   var errorCode = error.code;
   var errorMessage = error.message;
   // ...
-});
+}
+window.alert("Signed Up Succesfully")
 
     
     
